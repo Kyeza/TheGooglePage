@@ -9,12 +9,13 @@
 		<title>Google</title>
 
 		<style type="text/css">
-			html, body {
+			* {
 				box-sizing: border-box;
 			}
 
 			body {
 				font-family: 'Helvetica', 'Arial', sans-serif;
+				height: 100%;
 			}
 
 			.inline-list {
@@ -35,6 +36,14 @@
 				text-align: center;
 				font-weight: 400
 				font-size: 13vw;
+  				padding: 16px;
+  				text-decoration: none;
+			}
+
+			footer > ul > li > a {
+				display: block;
+				text-align: center;
+				font-size: 13px;
   				padding: 16px;
   				text-decoration: none;
 			}
@@ -73,10 +82,7 @@
 				}
 
 				.google-text h1 {
-					font-weight: 500;
-					font-size: 12vw;
-					margin: 0;
-					padding: 0;
+					font-weight: 500; font-size: 12vw; margin: 0; padding: 0;
 				}
 			}
 
@@ -87,10 +93,7 @@
 				}
 
 				.google-text h1 {
-					font-weight: 500;
-					font-size: 12vw;
-					margin: 0;
-					padding: 0;
+					font-weight: 500; font-size: 12vw; margin: 0; padding: 0;
 				}
 			}
 
@@ -108,10 +111,33 @@
 				}
 			}			
 			
+			.submit-btns {
+				padding: 10px 15px; border: none; background-color: #F2F2F2;
+			}
+
+			footer {
+				position: fixed; left: 0; bottom: 0; width: 100%;
+			}
+
+			.footer {
+				background-color: #F2F2F2;
+				display: flex;
+				justify-content: flex-start;
+				margin: 0;
+			}
+
+			.right-list {
+				margin-left: auto;
+			}
+
+			.card {
+			  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+			}
+
 		</style>
 	</head>
 	<body>
-		<nav>
+		<nav style="margin-bottom: 30px">
 			<ul class="inline-list">
 				<li><a style="background: #4584f0; margin: 10px; padding: 4px 9px; color: white; border: 1px solid #4584f0;" href="#">Sign In</a></li>
 				<li><a href="#"><img src="images/apps_icon.png" width="25" height="25"></a></li>
@@ -119,30 +145,33 @@
 				<li><a href="#">Gmail</a></li>
 			</ul>
 		</nav>
+
 		<header class="google-text">
 			<h1><span style="color: #4285F4;" >G</span><span style="color: #EA4335;" >o</span><span style="color: #FBBC05;" >o</span><span style="color: #4285F4;" >g</span><span style="color: #34A853;" >l</span><span style="color: #EA4335;" >e</span></h1>
 		</header>
-		<section class="container">
-			<input id="search" type="text" name="search" required>
+
+		<form class="container">
+			<input style="border: none;" class="card" id="search" type="text" name="search" required>
 			<ul class="inline-list" style="padding: 0; display: flex; justify-content: center;">
-				<li style="margin: 10px">
-					<button type="submit">Google Search</button>
+				<li style="margin: 10px;">
+					<button type="submit" class="submit-btns">Google Search</button>
 				</li>
 				<li style="margin: 10px;">
-					<button type="submit">I'm Feeling Lucky</button>
+					<button type="submit" class="submit-btns">I'm Feeling Lucky</button>
 				</li>
 			</ul>
-		</section>
-		<footer>
-			<ul>
-				<li>Advertising</li>
-				<li>Business</li>
-				<li>About</li>
+		</form>
+
+		<footer class="footer">
+			<ul class=" inline-list" style="color: #ADADAD;">
+				<li><a href="#">Advertising</a></li>
+				<li><a href="#">Business</a></li>
+				<li><a href="#">About</a></li>
 			</ul>
-			<ul>
-				<li>Privacy</li>
-				<li>Terms</li>
-				<li>Settings</li>
+			<ul class="inline-list right-list" style="color: #ADADAD;">
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">Settings</a></li>
 			</ul>
 		</footer>
 	</body>
