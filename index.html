@@ -9,12 +9,13 @@
 		<title>Google</title>
 
 		<style type="text/css">
-			html, body {
+			* {
 				box-sizing: border-box;
 			}
 
 			body {
 				font-family: 'Helvetica', 'Arial', sans-serif;
+				height: 100%;
 			}
 
 			.inline-list {
@@ -35,6 +36,14 @@
 				text-align: center;
 				font-weight: 400
 				font-size: 13vw;
+  				padding: 16px;
+  				text-decoration: none;
+			}
+
+			footer > ul > li > a {
+				display: block;
+				text-align: center;
+				font-size: 13px;
   				padding: 16px;
   				text-decoration: none;
 			}
@@ -73,10 +82,7 @@
 				}
 
 				.google-text h1 {
-					font-weight: 500;
-					font-size: 12vw;
-					margin: 0;
-					padding: 0;
+					font-weight: 500; font-size: 12vw; margin: 0; padding: 0;
 				}
 			}
 
@@ -87,10 +93,7 @@
 				}
 
 				.google-text h1 {
-					font-weight: 500;
-					font-size: 12vw;
-					margin: 0;
-					padding: 0;
+					font-weight: 500; font-size: 12vw; margin: 0; padding: 0;
 				}
 			}
 
@@ -108,6 +111,25 @@
 				}
 			}			
 			
+			.submit-btns {
+				padding: 10px 15px; border: none; background-color: #F2F2F2;
+			}
+
+			footer {
+				position: fixed; left: 0; bottom: 0; width: 100%;
+			}
+
+			.footer {
+				background-color: #F2F2F2;
+				display: flex;
+				justify-content: flex-start;
+				margin: 0;
+			}
+
+			.right-list {
+				margin-left: auto;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -125,24 +147,25 @@
 		<section class="container">
 			<input id="search" type="text" name="search" required>
 			<ul class="inline-list" style="padding: 0; display: flex; justify-content: center;">
-				<li style="margin: 10px">
-					<button type="submit">Google Search</button>
+				<li style="margin: 10px;">
+					<button type="submit" class="submit-btns">Google Search</button>
 				</li>
 				<li style="margin: 10px;">
-					<button type="submit">I'm Feeling Lucky</button>
+					<button type="submit" class="submit-btns">I'm Feeling Lucky</button>
 				</li>
 			</ul>
 		</section>
-		<footer>
-			<ul>
-				<li>Advertising</li>
-				<li>Business</li>
-				<li>About</li>
+
+		<footer class="footer">
+			<ul class=" inline-list" style="color: #ADADAD;">
+				<li><a href="#">Advertising</a></li>
+				<li><a href="#">Business</a></li>
+				<li><a href="#">About</a></li>
 			</ul>
-			<ul>
-				<li>Privacy</li>
-				<li>Terms</li>
-				<li>Settings</li>
+			<ul class="inline-list right-list" style="color: #ADADAD;">
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Terms</a></li>
+				<li><a href="#">Settings</a></li>
 			</ul>
 		</footer>
 	</body>
