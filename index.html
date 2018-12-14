@@ -130,6 +130,10 @@
 				margin-left: auto;
 			}
 
+			.card {
+			  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+			}
+
 		</style>
 	</head>
 	<body>
@@ -147,7 +151,7 @@
 		</header>
 
 		<form class="container">
-			<input id="search" type="text" name="search" required>
+			<input style="border: none;" class="card" id="search" type="text" name="search" required>
 			<ul class="inline-list" style="padding: 0; display: flex; justify-content: center;">
 				<li style="margin: 10px;">
 					<button type="submit" class="submit-btns">Google Search</button>
